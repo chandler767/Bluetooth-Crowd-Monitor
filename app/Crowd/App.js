@@ -26,7 +26,7 @@ export default class App extends Component<Props> {
     });
     // Update when a new value is received.
     this.pubnub.getMessage('advertised_devices_count', (msg) => {
-      this.updateCount(msg.message+8)
+      this.updateCount(msg.message)
     });
     // Get and display last count.
     this.pubnub.history(
@@ -36,7 +36,7 @@ export default class App extends Component<Props> {
       },
       function (status, response) {
         if (status.statusCode == 200) {
-          this.updateCount(response.messages[0].entry+6)
+          this.updateCount(response.messages[0].entry)
         }
       }.bind(this)
     );
