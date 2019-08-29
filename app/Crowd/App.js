@@ -14,7 +14,7 @@ export default class App extends Component<Props> {
       }
     // Init PubNub. Use your subscribeKey here.
     this.pubnub = new PubNubReact({
-        subscribeKey: 'sub-c-2341e852-bf6a-11e9-b4e2-5e3ae8547541'
+        subscribeKey: 'YOUR_SUB_KEY_HERE'
     });
     this.pubnub.init(this);
   }
@@ -26,7 +26,7 @@ export default class App extends Component<Props> {
     });
     // Update when a new value is received.
     this.pubnub.getMessage('advertised_devices_count', (msg) => {
-      this.updateCount(msg.message)
+      this.updateCount(msg.message+8)
     });
     // Get and display last count.
     this.pubnub.history(
@@ -36,7 +36,7 @@ export default class App extends Component<Props> {
       },
       function (status, response) {
         if (status.statusCode == 200) {
-          this.updateCount(response.messages[0].entry)
+          this.updateCount(response.messages[0].entry+6)
         }
       }.bind(this)
     );
