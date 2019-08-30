@@ -1,6 +1,6 @@
 # BLE Crowd Monitor
 
-<a href="https://www.pubnub.com/blog/build-bluetooth-low-energy-arduino-crowd-monitor-scanner-esp32-p1" target="_blank" rel="noopener"><img align="right" src="https://www.pubnub.com/blog/wp-content/uploads/2019/08/7-2-9.gif" alt="Realtime Stream App" height="400" /></a>
+<a href="https://www.pubnub.com/blog/build-bluetooth-low-energy-arduino-crowd-monitor-scanner-esp32-p1" target="_blank" rel="noopener"><img align="right" src="https://www.pubnub.com/blog/wp-content/uploads/2019/08/7-2-9.gif" alt="Realtime Stream App" height="250" /></a>
 
 This project uses the ESP32’s BLE to scan for advertising BLE devices and the ESP32’s WiFi to publish the mac address of the advertising devices to PubNub. Then it uses serverless PubNub Functions to keep a realtime count of the number of advertising devices and displays the count in a React Native app.
 
