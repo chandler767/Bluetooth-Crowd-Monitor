@@ -27,6 +27,11 @@ export default (request) => {
     })
     .catch((e) => {
         console.error(e);
+        // Reset count.
+        store.set('advertising_devices', {
+            count: 0
+        });
+        return request.ok();
     });
     return request.ok();
 }
